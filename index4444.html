@@ -311,8 +311,15 @@ try{ Telegram.WebApp.ready(); Telegram.WebApp.expand(); }catch(e){}
    إعداد مونيتاق — بدّل الاسم زي ما أعطاك مونيتاق بالضبط
 ================================================================== */
 const MONETAG = {
-  showAdFunctionName: 'show_YOUR_ZONE_ID' // <-- بدّل هذا باسم الدالة الحقيقي من مونيتاق
-};
+
+
+// Rewarded interstitial
+
+show_11267765().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen an ad!');
+})
 function isMonetagReady(){
   return typeof window[MONETAG.showAdFunctionName] === 'function';
 }
